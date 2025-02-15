@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Arpita K Portfolio</title>
+    <link rel="stylesheet" href="protfolionew.css">
+</head>
+
+<body>
+    <div class="box">
+        <center>
+            <img id="profileImg" src="https://via.placeholder.com/150" alt="Profile Picture">
+        </center>
+
+        <center>
+            <button class="changeinfo-btn" onclick="changeinfo()">Change Information</button>
+        </center>
+        <div class="mycontainer">
+            <h2 style="text-align: center;">Name:</h2>
+            <p id="name" style="text-align:center;">Not Provided</p>
+        </div>
+        <hr>
+        <div class="mycontainer">
+            <address>
+                <h2 style="text-align: center;">Address:</h2>
+                <p id="addr" style="text-align:center;">Not Provided</p>
+            </address>
+        </div>
+        <div class="mycontainer">
+            <h2 style="text-align: center;">About me:</h2>
+            <p id="aboutme" style="text-align:center;">Not Provided</p>
+        </div>
+        <div class="mycontainer">
+            <h2 style="text-align: center;">Profession:</h2>
+            <p id="proff" style="text-align:center;">Not Provided</p>
+        </div>
+        <div class="mycontainer">
+            <br>
+            <h2>Skills</h2>
+            <hr>
+            <ul>
+                <li>C</li>
+                <li>C++</li>
+                <li>Python</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Java</li>
+            </ul>
+        </div>
+        <div class="mycontainer">
+            <h2>Projects</h2>
+            <p>I am studying in D Y Patil School of Engineering and Management. Currently, I am pursuing a B.Tech degree in
+                Computer Science and Engineering. I like reading books, magazines, cooking, going on
+                adventures, listening to music, etc. I have an interest in computer coding. I want to be placed in my dream company, Microsoft. I will do
+                my best throughout my academics.
+            </p>
+        </div>
+        <div class="footer">
+            <h2 style="text-align:center">Contact Me-</h2>
+            <p><b>E-mail:</b> <a href="mailto:arpitakoli20may@gmail.com">arpitakoli20may@gmail.com</a></p>
+            <p><b>Mobile No:</b> 8888432636</p>
+        </div>
+    </div>
+    
+    <script>   
+        function changeinfo() {
+            let name = prompt("Enter your name:");
+            let addr = prompt("Enter your Address:");
+            let aboutme = prompt("Enter about you:");
+            let proff = prompt("Enter your profession:");
+            let imageUrl = prompt("Enter the URL of your profile picture:");
+
+            if (!name) {
+                alert("Name cannot be empty. Please enter a valid name.");
+                return;
+            }
+            if (!addr) {
+                alert("Address cannot be empty. Please enter a valid address.");
+                return;
+            }
+            if (!aboutme) {
+                alert("About me cannot be empty. Please enter a valid description.");
+                return;
+            }
+            if (!proff) {
+                alert("Profession cannot be empty. Please enter a valid profession.");
+                return;
+            }
+
+            if (imageUrl) {
+                document.getElementById('profileImg').src = imageUrl;
+            }
+
+            document.getElementById('name').innerHTML= name;
+            document.getElementById('addr').innerText = addr;
+            document.getElementById('aboutme').innerText = aboutme;
+            document.getElementById('proff').innerText = proff;
+
+            alert(`Your bio has been updated!\nName: ${name}\nAddress: ${addr}\nAbout you: ${aboutme}\nProfession: ${proff}`);
+
+            console.log("User's Name:", name);
+            console.log("User's Address:", addr);
+            console.log("User's About Me:", aboutme);
+            console.log("User's Profession:", proff);
+            console.log("Profile Picture URL:", imageUrl);
+        }
+    </script>
+
+</body>
+</html>
